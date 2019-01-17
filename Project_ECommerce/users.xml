@@ -1,0 +1,9 @@
+<object-stream>
+  <list>
+    <application.User>
+      <username>teek123</username>
+      <password>123456</password>
+      <email>teeket@hotmail.com</email>
+    </application.User>
+  </list>
+</object-stream>

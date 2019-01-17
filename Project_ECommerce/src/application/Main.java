@@ -1,0 +1,30 @@
+//color palette used: https://colorhunt.co/palette/42191
+//-fx-control-inner-background(change the colour of textarea): https://stackoverflow.com/questions/36423200/textarea-javafx-color
+package application;
+
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.stage.Stage;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+
+
+public class Main extends Application {
+	@Override
+	public void start(Stage primaryStage) {
+		try {
+			//EShopModel shop =new EShopModel();
+			Parent root = FXMLLoader.load(getClass().getResource("/application/Home.fxml"));
+			Scene scene = new Scene(root,1100,750);
+			//scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			primaryStage.setScene(scene);
+			primaryStage.show();
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public static void main(String[] args) {
+		launch(args);
+	}
+}

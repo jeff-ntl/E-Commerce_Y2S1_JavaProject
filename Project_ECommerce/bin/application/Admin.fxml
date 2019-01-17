@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane style="-fx-background-color: #e3fdfd;" xmlns="http://javafx.com/javafx/8.0.191" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AdminController">
+   <children>
+      <BorderPane prefHeight="750.0" prefWidth="1100.0">
+         <top>
+            <VBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="100.0" BorderPane.alignment="TOP_CENTER">
+               <children>
+                  <Label text="ECommerce" textFill="#71c9ce">
+                     <font>
+                        <Font name="Comic Sans MS" size="40.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="10.0" text="Administration Page" textFill="#71c9ce">
+                     <font>
+                        <Font name="Comic Sans MS" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </top>
+         <bottom>
+            <TextArea fx:id="txtFeedback" prefHeight="100.0" prefWidth="200.0" promptText="Response..." style="-fx-control-inner-background: #cbf1f5;" BorderPane.alignment="CENTER" />
+         </bottom>
+         <right>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="readButton" layoutX="10.0" layoutY="124.0" mnemonicParsing="false" onAction="#handleReadBtn" prefWidth="100.0" style="-fx-background-color: #71c9ce;" stylesheets="@application.css" text="Read" textFill="#e3fdfd">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="createButton" mnemonicParsing="false" onAction="#handleCreateBtn" prefWidth="100.0" style="-fx-background-color: #71c9ce;" stylesheets="@application.css" text="Create" textFill="#e3fdfd">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="editButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleEditBtn" prefWidth="100.0" style="-fx-background-color: #71c9ce;" stylesheets="@application.css" text="Edit" textFill="#e3fdfd">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="removeButton" layoutX="10.0" layoutY="54.0" mnemonicParsing="false" onAction="#handleRemoveBtn" prefWidth="100.0" style="-fx-background-color: #71c9ce;" stylesheets="@application.css" text="Remove" textFill="#e3fdfd">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="saveButton" layoutX="10.0" layoutY="54.0" mnemonicParsing="false" onAction="#handleSaveBtn" prefWidth="100.0" style="-fx-background-color: #71c9ce;" stylesheets="@application.css" text="Save" textFill="#e3fdfd">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="loadButton" layoutX="10.0" layoutY="98.0" mnemonicParsing="false" onAction="#handleLoadBtn" prefWidth="100.0" style="-fx-background-color: #71c9ce;" stylesheets="@application.css" text="Load" textFill="#e3fdfd">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="backButton" layoutX="10.0" layoutY="369.0" mnemonicParsing="false" onAction="#handleBackButton" prefWidth="100.0" style="-fx-background-color: #71c9ce;" stylesheets="@application.css" text="Back" textFill="#e3fdfd">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Button>
+               </children>
+               <BorderPane.margin>
+                  <Insets right="10.0" />
+               </BorderPane.margin>
+            </VBox>
+         </right>
+         <left>
+            <VBox prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fx:id="productImage" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <VBox.margin>
+                        <Insets top="110.0" />
+                     </VBox.margin>
+                  </ImageView>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <VBox prefHeight="200.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label text="Select Category &amp; Sub-Category" textFill="#71c9ce">
+                     <font>
+                        <Font name="Comic Sans MS" size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <ComboBox fx:id="comboCategory" prefHeight="26.0" prefWidth="760.0" promptText="Category" style="-fx-background-color: #a6e3e9; -fx-border-color: #71c9ce;">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </ComboBox>
+                  <ComboBox fx:id="comboSubCategory" layoutX="10.0" layoutY="36.0" prefHeight="26.0" prefWidth="760.0" promptText="Sub-Category" style="-fx-background-color: #a6e3e9; -fx-border-color: #71c9ce;">
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </VBox.margin>
+                  </ComboBox>
+                  <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <VBox prefHeight="100.0" prefWidth="350.0">
+                           <children>
+                              <Label text="Product ID:" textFill="#71c9ce">
+                                 <font>
+                                    <Font name="Comic Sans MS" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="10.0" layoutY="10.0" text="Product Name:" textFill="#71c9ce">
+                                 <font>
+                                    <Font name="Comic Sans MS" size="18.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label layoutX="10.0" layoutY="36.0" text="Product Description:" textFill="#71c9ce">
+                                 <font>
+                                    <Font name="Comic Sans MS" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="10.0" layoutY="36.0" text="Product Weight:" textFill="#71c9ce">
+                                 <font>
+                                    <Font name="Comic Sans MS" size="18.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label layoutX="10.0" layoutY="61.0" text="Product Cost:" textFill="#71c9ce">
+                                 <font>
+                                    <Font name="Comic Sans MS" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="10.0" layoutY="87.0" text="Product Quantity:" textFill="#71c9ce">
+                                 <font>
+                                    <Font name="Comic Sans MS" size="18.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="100.0" prefWidth="400.0">
+                           <children>
+                              <TextField fx:id="txtID" style="-fx-background-color: #cbf1f5; -fx-border-color: #71c9ce; -fx-border-radius: 25px;" />
+                              <TextField fx:id="txtName" layoutX="10.0" layoutY="10.0" style="-fx-background-color: #cbf1f5; -fx-border-color: #71c9ce; -fx-border-radius: 25px;">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <TextField fx:id="txtDescription" layoutX="10.0" layoutY="36.0" style="-fx-background-color: #cbf1f5; -fx-border-color: #71c9ce; -fx-border-radius: 25px;" />
+                              <TextField fx:id="txtWeight" layoutX="10.0" layoutY="36.0" style="-fx-background-color: #cbf1f5; -fx-border-color: #71c9ce; -fx-border-radius: 25px;">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <TextField fx:id="txtCost" layoutX="10.0" layoutY="63.0" style="-fx-background-color: #cbf1f5; -fx-border-color: #71c9ce; -fx-border-radius: 25px;" />
+                              <TextField fx:id="txtQuantity" layoutX="10.0" layoutY="63.0" style="-fx-background-color: #cbf1f5; -fx-border-color: #71c9ce; -fx-border-radius: 25px;">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </TextField>
+                           </children>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Label prefHeight="27.0" prefWidth="461.0" text="** Only Product ID is required to remove an item. **" textFill="#71c9ce">
+                     <font>
+                        <Font name="Comic Sans MS Bold Italic" size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Label>
+               </children>
+               <BorderPane.margin>
+                  <Insets top="100.0" />
+               </BorderPane.margin>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
